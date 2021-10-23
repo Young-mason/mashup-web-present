@@ -1,0 +1,28 @@
+{
+  "name": "newming-automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Young-mason/newming-automation.git",
+  "author": "mason <mason.yk3@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node app.ts",
+    "bot": "ts-node slack-bot.ts",
+    "scrap": "ts-node ./src/scrapper/index.ts",
+    "reward": "ts-node ./src/reward/index.ts",
+    "start": "pm2 start ts-node -- -P tsconfig.json ./src/scheduler.ts"
+  },
+  "dependencies": {
+    "axios": "^0.23.0",
+    "dotenv": "^10.0.0",
+    "jsdom": "^18.0.0",
+    "node-schedule": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "^16.2.13",
+    "@types/node": "^16.10.9",
+    "@types/node-schedule": "^1.3.2",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}
